@@ -10,7 +10,6 @@ while ($row = $result->fetchAll(PDO::FETCH_NUM)) {
         $res_time = $data[2];
         $res_latitude = $data[3];
         $res_longitude = $data[4];
-        $comment = $data[5];
         
         $uid_name = $db->query("SELECT name FROM user where id = '$uid'");
         while ($uid_name_row = $uid_name->fetchAll(PDO::FETCH_NUM)) {
@@ -18,16 +17,15 @@ while ($row = $result->fetchAll(PDO::FETCH_NUM)) {
         }
 
         $array_before = array(
-                            "id" => $data[0],
+                            "id" => $id,
                             "uname" => $username,
-                            "res_time" => $data[2],
-                            "res_latitude" => $data[3],
-                            "res_longitude" => $data[4],
-                            "comment" => $data[5]
+                            "res_time" => $res_time,
+                            "res_latitude" => $res_latitude,
+                            "res_longitude" => $res_longitude
                         );
         array_push($result_array, $array_before);
     }
 }
 $result_json = json_encode($result_array);
-var_dump($result_json);
+echo($result_json);
 ?>

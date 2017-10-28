@@ -15,9 +15,9 @@ $result = $db->query("SELECT * FROM user where name = '$name'");
 $row = $result->fetchAll(PDO::FETCH_NUM);
 
 if (count($row)>0){
-  print('{"result":"1"}');
+  echo(json_encode(array("result" => 1)));
 }else{
-  print('{"result":"0"}');
+  echo(json_encode(array("result" => 0)));
 }
 
 ?>

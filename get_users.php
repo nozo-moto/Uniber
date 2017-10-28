@@ -6,15 +6,15 @@ while ($row = $result->fetchAll(PDO::FETCH_NUM)) {
     foreach($row as $data){
         $id = $data[0];
         $uname = $data[1];
-        $res_latitude = $data[2];
-        $res_longitude = $data[3];
+        $home_latitude = $data[2];
+        $home_longitude = $data[3];
         $have_car = $data[4];
         $array_before = array(
-                            "id" => $data[0],
-                            "uname" => $data[1],
-                            "res_latitude" => $data[2],
-                            "res_longitude" => $data[3],
-                            "have_car" => $data[4]
+                            "id" => $id,
+                            "uname" => $uname,
+                            "home_latitude" => $home_latitude,
+                            "home_longitude" => $home_longitude,
+                            "have_car" => $have_car
                          );
         array_push($result_array, $array_before);
     }
