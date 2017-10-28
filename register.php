@@ -18,9 +18,9 @@ $have_car=$obj["have_car"];
 $db=new PDO("sqlite:db/uniber.db");
 $run=$db->query("INSERT INTO user(name,home_latitude,home_longitude,have_car) VALUES('$name','$home_latitude','$home_longitude','$have_car')");
 if (!$run){
-  print('{"success":"0"}');
+  print('{"result":"0"}');
 }else{
-  print('{"success":"1"}');
+  print('{"result":"1"}');
 }
 
 ?>
