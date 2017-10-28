@@ -20,7 +20,7 @@ foreach($obj as $o){
     $res_longitude = $obj->res_longitude;
     $comment = $obj->comment;
 }
-$run=$db->query("insert into want_ride(uid, res_time, res_time, res_time, comment) values( '$uid', '$res_time' , '$res_latitude' , '$res_longitude' , '$comment' )");
+$run=$db->prepare("insert into want_ride(uid, res_time, res_latitude, res_longitude, comment) values('1' ,'201710100910' ,'135.00' ,'35' ,'it's a comment' )");
 if (!$run){
     print("err "."\n");
     return;
