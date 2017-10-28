@@ -1,12 +1,12 @@
 <?php
-// $json_string = file_get_contents('php://input');
+$json_string = file_get_contents('php://input');
 
-$json_string='{
-"name": "user name",
-"home_latitude" : "135.00",
-"home_longitude" : "35.00",
-"have_car" : "1"
-}';
+// $json_string='{
+// "name": "user name",
+// "home_latitude" : "135.00",
+// "home_longitude" : "35.00",
+// "have_car" : "1"
+// }';
 $obj = json_decode($json_string, true);
 
 $name=$obj["name"];
