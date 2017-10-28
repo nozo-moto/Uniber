@@ -1,4 +1,5 @@
 <?php
+require "func_conv_addr.php";
 $db = new PDO('sqlite:db/uniber.db');
 
 $result = $db->query('SELECT * FROM supply_car');
@@ -15,13 +16,14 @@ while ($row = $result->fetchAll(PDO::FETCH_NUM)) {
         while ($uid_name_row = $uid_name->fetchAll(PDO::FETCH_NUM)) {
             $username = $uid_name_row[0][0];
         }
-
+        $address = conv_addr($res_latitude, $res_longitude);
         $array_before = array(
                             "id" => $id,
                             "uname" => $username,
                             "res_time" => $res_time,
                             "res_latitude" => $res_latitude,
-                            "res_longitude" => $res_longitude
+                            "res_longitude" => $res_longitude,
+                            "address" => $address
                         );
         array_push($result_array, $array_before);
     }
