@@ -1,5 +1,5 @@
 <?php
-require "func_delete_matched_data";
+require "func_delete_matched_data.php";
 
 try{
     $db = new PDO('sqlite:db/uniber.db');
@@ -36,6 +36,7 @@ try{
             )");
     if (!$run){
         echo(json_encode(array("result" => 0))); 
+        return;
     }
 
     func_delete_matched_data($supply_car_id);
