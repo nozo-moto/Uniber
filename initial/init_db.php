@@ -36,7 +36,7 @@ try {
         supply_res_time INTEGER,
         supply_res_latitude REAL,
         supply_res_longitude REAL,
-        supply_comment TEXT,
+        supply_comment TEXT
     )");
 
     }
