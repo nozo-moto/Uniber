@@ -3,7 +3,7 @@
 //座標値を住所に変換
 
 
-function conv_addr($longitude, $latitude){
+function conv_addr($latitude, $longitude){
 $GMAD = json_decode(@file_get_contents('http://maps.google.com/maps/api/geocode/json?latlng=' . 
     $latitude . ',' . $longitude . '&sensor=false&language=ja'), true);
 
