@@ -112,7 +112,7 @@ register.php
 #### request
 ```
 {
-"name": "user name"
+"id": "user id"
 }
 ```
 #### response
