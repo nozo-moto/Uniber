@@ -100,12 +100,73 @@ register.php
 #### response
 ```
 {
-"success" : "1"
+"result" : "1"
 }
 
 0:失敗
 1:成功
 ```
+
+### login.php
+
+#### request
+```
+{
+"name": "user name"
+}
+```
+#### response
+```
+{
+"result" : "1"
+}
+
+1:ログイン成功
+0:ログイン失敗（ユーザー名またはパスワードが違う、ユーザーが存在しないなど）
+```
+
+### want_ride.php
+
+#### request
+```
+{
+  "id": "userid",
+  "res_time" : "201710100910",
+  "res_latitude" : "135.00",
+  "res_longitude" : "35"
+}
+```
+#### response
+```
+{
+"result" : "1"
+}
+
+0:失敗
+1:成功
+```
+
+### supply_car.php
+
+#### request
+```
+{
+    "id": "userid"
+    "res_time" : "201710100910",
+    "res_latitude" : "135.00",
+    "res_longitude" : "35"
+}
+```
+#### response
+```
+{
+"result" : "1"
+}
+
+0:失敗
+1:成功
+```
+
 
 # Database Structure
 
