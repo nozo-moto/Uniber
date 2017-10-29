@@ -11,7 +11,7 @@ $name=$obj["id"];
 
 $db = new PDO('sqlite:db/uniber.db');
 
-$result = $db->query("SELECT * FROM user where name = '$name'");
+$result = $db->query("SELECT * FROM user where id = '$name'");
 $row = $result->fetchAll(PDO::FETCH_NUM);
 
 if (count($row)>0){
