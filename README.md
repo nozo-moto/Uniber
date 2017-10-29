@@ -37,6 +37,7 @@ register.php
     "res_time" : "送る時間",
     "res_latitude" : "送る緯度",
     "res_longitude" : "送る経度",
+    "address" : "住所"
     "comment" : "コメント"
 },...
 ]
@@ -58,6 +59,7 @@ register.php
     "res_time" : "送って欲しい時間",
     "res_latitude" : "送ってほしい緯度",
     "res_longitude" : "送ってほしい経度",
+    "address" : "住所",
     "comment" : "コメント"
 },...
 ]
@@ -78,6 +80,7 @@ register.php
     "name": "hogehoge",
     "home_latitude": "135.00",
     "home_longitude": "45",
+    "address" : "住所",
     "have_car": "0"
 },,...
 ]
