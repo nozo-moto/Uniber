@@ -131,9 +131,7 @@ register.php
 ```
 {
   "id": "userid",
-  "res_time" : "201710100910",
-  "res_latitude" : "135.00",
-  "res_longitude" : "35"
+  "supply_car_id" : "supply_car_id"
 }
 ```
 #### response
