@@ -28,6 +28,22 @@ try {
         comment TEXT
     )");
 
+    $pdo->exec("CREATE TABLE IF NOT EXISTS matching(
+        id INTEGER PRIMARY KEY,
+        supply_id INTEGER,
+        supply_uid INTEGER,
+        supply_res_time INTEGER,
+        supply_res_latitude REAL,
+        supply_res_longitude REAL,
+        supply_comment TEXT,
+        want_id INTEGER,
+        want_uid INTEGER,
+        want_res_time INTEGER,
+        want_res_latitude REAL,
+        want_res_longitude REAL,
+        want_comment TEXT
+    )");
+
     }
 catch (Exception $e) {
     echo $e->getMessage();
